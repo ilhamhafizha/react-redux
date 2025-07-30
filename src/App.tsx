@@ -1,8 +1,15 @@
+import { Button } from "./components/ui/button";
+
 function App() {
   return (
-    <main>
-      <div className="bg-blue-500 text-white p-4">Hello Tailwind!</div>
-    </main>
+    <>
+      <main>
+        <Button className="bg-green-500">Button Aja</Button>
+        <Button variant="destructive" size={"lg"}>
+          Button destructive
+        </Button>
+      </main>
+    </>
   );
 }
 
