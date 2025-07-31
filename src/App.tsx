@@ -7,7 +7,7 @@ const productRaw = [
     imageUrl: "https://laz-img-sg.alicdn.com/p/8b0d3d2645bdbc5ec85ec62c3fe2be5a.jpg",
     name: "T-shirt Boba",
     price: 100000,
-    stock: 10,
+    stock: 0,
   },
   {
     imageUrl: "https://the49thsupplyco.com/cdn/shop/products/true-navy-t-shirt.jpg?v=1612224858",

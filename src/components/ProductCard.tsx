@@ -51,8 +51,8 @@ export const ProductCard = (props: Props) => {
         </div>
 
         {/* Add Cart */}
-        <Button className="w-full" onClick={addCart}>
-          Add Cart
+        <Button disabled={!stock || !quantity} className="w-full" onClick={addCart}>
+          {stock > 0 ? "Add Card" : "Out of stock"}
         </Button>
       </div>
     </div>
