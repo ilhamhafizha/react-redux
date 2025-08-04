@@ -31,7 +31,9 @@ export const Header = () => {
         <Separator orientation="vertical" className="h-full" />
 
         <div className="flex space-x-2">
-          <Button>Log In</Button>
+          <Link to="/login">
+            <Button>Log In</Button>
+          </Link>
           <Button variant="outline">Sign Up</Button>
         </div>
       </div>
