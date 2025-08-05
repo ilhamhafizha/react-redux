@@ -14,11 +14,21 @@ import {
   FormControl,
   FormDescription,
 } from "@/components/ui/form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Form {
   username: string;
   password: string;
 }
+
+const loginFormSchema = z.object({
+  username: z
+    .string()
+    .min(3, "Username has to be 3 and 16 characters or more")
+    .max(16, "username has to be less than 16 characters"),
+  password: z.string().min(8, "password has to be 8 characters or more"),
+});
 
 const LoginPage = () => {
   const form = useForm({
@@ -26,9 +36,12 @@ const LoginPage = () => {
       username: "",
       password: "",
     },
+    resolver: zodResolver(loginFormSchema),
+    reValidateMode: "onSubmit",
   });
 
   const [isChecked, setIsChecked] = useState(false);
+  ``;
 
   const handleLogin = (values: Form) => {
     alert(`username ${values.username} password ${values.password}`);
