@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { axiosIntance } from "@/lib/axios";
 import { useEffect, useState } from "react";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
@@ -15,13 +16,17 @@ const ProductDetailPage = () => {
   });
 
   const params = useParams();
+  const [productsIsLoading, setProductsIsLoading] = useState(true);
 
   const fetchProduct = async () => {
     try {
+      setProductsIsLoading(true);
       const response = await axiosIntance.get(`/products/${params.productId}`);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching product:", error);
+    } finally {
+      setProductsIsLoading(false);
     }
   };
 
@@ -35,16 +40,33 @@ const ProductDetailPage = () => {
     <>
       <main className="min-h-screen  max-w-screen-lg mx-auto px-4 mt-8 ">
         <div className="grid grid-cols-2 gap-8">
-          <img src={products.imageUrl} alt={products.name} className="w-full" />
+          {productsIsLoading ? (
+            <Skeleton className="w-full h-[582px]" />
+          ) : (
+            <img src={products.imageUrl} alt={products.name} className="w-full" />
+          )}
+
           <div className="flex flex-col gap-1 justify-center">
-            <h1 className="text-3xl font-bold">{products.name}</h1>
-            <p className="text-lg text-gray-700 mt-2">
-              Price: {products.price.toLocaleString("id-ID")}
-            </p>
-            <p className="tex-sm text-muted-foreground mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium at sequi natus
-              eos maiores magnam omnis aut debitis doloribus nesciunt.
-            </p>
+            {productsIsLoading ? (
+              <Skeleton className="w-[250px] h-[32px]" />
+            ) : (
+              <h1 className="text-3xl font-bold">{products.name}</h1>
+            )}
+
+            {productsIsLoading ? (
+              <Skeleton className="w-[350px] h-[48px]" />
+            ) : (
+              <p className="text-xl font-semibold">Rp {products.price.toLocaleString("id-ID")}</p>
+            )}
+
+            {productsIsLoading ? (
+              <Skeleton className="w-[350px] h-[120px] mt-4" />
+            ) : (
+              <p className="tex-sm text-muted-foreground mt-4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium at sequi natus
+                eos maiores magnam omnis aut debitis doloribus nesciunt.
+              </p>
+            )}
             <div className="flex items-center gap-8 mt-6">
               <Button size="icon" variant="ghost">
                 <IoIosRemove className="w-6 h-6" />
