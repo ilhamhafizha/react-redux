@@ -1,17 +1,10 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { IoIosRemove, IoIosAdd } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-interface Props {
-  imageUrl: string;
-  name: string;
-  price: number;
-  stock: number;
-}
-
-export const ProductCard = (props: Props) => {
-  const { imageUrl, name, price, stock } = props;
-
+export const ProductCard = (props: any) => {
+  const { imageUrl, name, price, stock, id } = props;
   const [quantity, setquantity] = useState(0);
 
   const addquantity = () => {
@@ -27,16 +20,28 @@ export const ProductCard = (props: Props) => {
     alert("Add Cart");
   };
 
+  // useEffect(() => {
+  //   alert("Component did mount");
+  // }, []);
+
+  // useEffect(() => {
+  //   alert("Component did Updated ");
+  // }, [quantity]);
+
+  // useEffect(() => {
+  //   return () => alert("Component  unmount");
+  // }, []);
+
   return (
     <div className="p-4 border rounded-md md:max-w-96 flex flex-col gap-4">
-      <div className="aspect-square w-full overflow-hidden">
+      <Link to={`/product/${id}`}>
         <img className="w-full" src={imageUrl} alt="product" />
-      </div>
-      <div>
+      </Link>
+      <Link to={`/product/${id}`}>
         <p className="text-lg">{name}</p>
         <p className="text-xl font-semibold">Rp {price.toLocaleString("id-ID")}</p>
         <p className="text-muted-foreground text-sm">Stock: {stock}</p>
-      </div>
+      </Link>
 
       <div className="flex flex-col gap-2">
         {/* Quantity */}

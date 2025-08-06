@@ -13,6 +13,132 @@
       "name": "T-shirt Mamba",
       "price": 120000,
       "stock": 5
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://down-id.img.susercontent.com/file/6ea7a2b31a01a46975c5fbbf424802ac",
+      "name": "T-shirt Vapor",
+      "price": 115000,
+      "stock": 8
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://i.pinimg.com/736x/3a/c0/37/3ac0373511393eb00d0f0bafaa8aef86.jpg",
+      "name": "T-shirt Oversize Tokyo",
+      "price": 135000,
+      "stock": 3
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/3/6/570e2a85-63cf-4bd8-a58f-3e4691a6dcdc.jpg",
+      "name": "T-shirt Basic Hitam",
+      "price": 95000,
+      "stock": 12
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://images.tokopedia.net/img/cache/700/product-1/2020/12/7/13119831/13119831_6fe6d9f8-2ff3-49d1-b85c-46a5ff69a500_800_800",
+      "name": "T-shirt Putih Polos",
+      "price": 90000,
+      "stock": 20
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://images.tokopedia.net/img/cache/500-square/product-1/2019/3/2/3384576/3384576_7a7f3c59-b326-4cc4-9f98-21cb82819749_2048_2048",
+      "name": "T-shirt Anime Naruto",
+      "price": 140000,
+      "stock": 4
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://cf.shopee.co.id/file/sg-11134201-22120-kkr9hi2n4kjv13",
+      "name": "T-shirt Streetwear Aesthetic",
+      "price": 150000,
+      "stock": 6
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://cf.shopee.co.id/file/2a44cda01a09b3b253bc3b33db59d2c5",
+      "name": "T-shirt Japan Street",
+      "price": 130000,
+      "stock": 9
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/10/22/2435b339-46a1-4d29-a287-5c6f240aaab2.jpg",
+      "name": "T-shirt Colorblock",
+      "price": 110000,
+      "stock": 7
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://i.pinimg.com/originals/54/c1/30/54c130f0878ed82c7a15897f9894b2ef.jpg",
+      "name": "T-shirt Kucing Lucu",
+      "price": 125000,
+      "stock": 10
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://img.lazcdn.com/g/ff/kf/Sf3e406c8de2141ac9aa15fa146f010f5V.jpg",
+      "name": "T-shirt Rick and Morty",
+      "price": 135000,
+      "stock": 2
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://i.pinimg.com/originals/60/71/4f/60714f19c8c78a236ae9f514e6659e85.jpg",
+      "name": "T-shirt Cartoon Chill",
+      "price": 99000,
+      "stock": 14
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98v-lq3q2zuwvw3u82",
+      "name": "T-shirt Retro Vibe",
+      "price": 119000,
+      "stock": 11
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/27/33c4c0c9-90b3-4c57-95e3-3c65d0a7f329.jpg",
+      "name": "T-shirt Stranger Things",
+      "price": 145000,
+      "stock": 3
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://cf.shopee.co.id/file/26de823a4444f3e6c1c862d038a4a0d5",
+      "name": "T-shirt Chill Bear",
+      "price": 100000,
+      "stock": 13
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://cf.shopee.co.id/file/sg-11134201-7rb6j-lrbfz85eh2tce0",
+      "name": "T-shirt Graphic Skate",
+      "price": 105000,
+      "stock": 9
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://img.lazcdn.com/g/p/c56a48d2749a4402b7712648ad750826.jpg",
+      "name": "T-shirt Grunge Skull",
+      "price": 135000,
+      "stock": 5
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://img.lazcdn.com/g/p/ff1ab8b08e2e99f9b622cc56f90d5731.jpg",
+      "name": "T-shirt Slogan Minimalis",
+      "price": 98000,
+      "stock": 6
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://cf.shopee.co.id/file/2c10ff5f08b4f2ee4fae7b28b27f3b13",
+      "name": "T-shirt Gaming Mode",
+      "price": 102000,
+      "stock": 7
     }
   ]
 }

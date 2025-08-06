@@ -1,24 +1,16 @@
 import { ProductCard } from "@/components/ProductCard";
-
-const productRaw = [
-  {
-    imageUrl: "https://laz-img-sg.alicdn.com/p/8b0d3d2645bdbc5ec85ec62c3fe2be5a.jpg",
-    name: "T-shirt Boba",
-    price: 100000,
-    stock: 0,
-  },
-  {
-    imageUrl: "https://the49thsupplyco.com/cdn/shop/products/true-navy-t-shirt.jpg?v=1612224858",
-    name: "T-shirt Mamba",
-    price: 120000,
-    stock: 5,
-  },
-];
+import { axiosIntance } from "@/lib/axios";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
-  const products = productRaw.map((product: any) => {
+  const [productsIsLoading, setProductsIsLoading] = useState(false);
+
+  const [products, setProducts] = useState([]);
+
+  const productList = products.map((product: any) => {
     return (
       <ProductCard
+        id={product.id}
         imageUrl={product.imageUrl}
         name={product.name}
         price={product.price}
@@ -26,6 +18,24 @@ const HomePage = () => {
       />
     );
   });
+
+  const fetchProducts = async () => {
+    setProductsIsLoading(true);
+    try {
+      const response = await axiosIntance.get("/products");
+      console.log(response.data);
+      setProducts(response.data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    } finally {
+      setProductsIsLoading(false);
+    }
+  };
+
+  // Fetch products when the component mounts
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   return (
     <>
@@ -39,8 +49,13 @@ const HomePage = () => {
             wardrobe and express your individuality every day.
           </p>
         </div>
-        {/* <Box /> */}
-        <div className="grid grid-cols-2 gap-4">{products}</div>
+        {productsIsLoading ? (
+          <div className="flex h-full justify-center items-center text-5xl font-bold">
+            <p>Loading...</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-3 gap-4">{productList}</div>
+        )}
       </main>
     </>
   );
