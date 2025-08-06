@@ -68,11 +68,15 @@ const ProductDetailPage = () => {
               </p>
             )}
             <div className="flex items-center gap-8 mt-6">
-              <Button size="icon" variant="ghost">
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setQuantity((q) => Math.max(0, q - 1))}
+              >
                 <IoIosRemove className="w-6 h-6" />
               </Button>
               <p className="text-lg font-bold">{quantity}</p>
-              <Button size="icon" variant="ghost">
+              <Button size="icon" variant="ghost" onClick={() => setQuantity((q) => q + 1)}>
                 <IoIosAdd className="w-6 h-6" />
               </Button>
             </div>
